@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es2018",                           /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "lib": [
+      "es2018",
+      "esnext.asynciterable"
+    ],
+    "experimentalDecorators": true,               /* Enable experimental support for TC39 stage 2 draft decorators. */
+    "emitDecoratorMetadata": true,                /* Emit design-type metadata for decorated declarations in source files. */
+    "module": "commonjs",                         /* Specify what module code is generated. */    
+    "esModuleInterop": true,                      /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "strict": true,                               /* Enable all strict type-checking options. */
+    "strictPropertyInitialization": false,        /* Check for class properties that are declared but not set in the constructor. */
+    "skipLibCheck": true,                         /* Skip type checking all .d.ts files. */
+    "noImplicitAny": true,                        /* Enable error reporting for expressions and declarations with an implied 'any' type. */
+    "outDir": "dist",    
+    "sourceMap": true,
+    "baseUrl": ".",  
+    "paths": {
+      "@schema/*": ["./src/schema/*"],
+      "@service/*": ["./src/service/*"],
+      "@resolvers/*": ["./src/resolvers/*"],
+      "@types/*": ["./src/types/*"],
+      "@utils/*": ["./src/utils/*"],
+    }
+  },
+  "include": [
+    "src/**/**.ts",
+    "test/**/**.ts"
+  ],  
+  "ts-node": {
+    "files": true,
+    "swc": false,
+    "require": ["tsconfig-paths/register"]
+  }
+}
